@@ -10,9 +10,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'retro': ['var(--font-orbitron)', 'monospace'],
-        'code': ['var(--font-jetbrains-mono)', 'monospace'],
-        'mono': ['var(--font-fira-code)', 'monospace'],
+        'sans': ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        'retro': ['Orbitron', 'monospace'],
+        'code': ['var(--font-jetbrains-mono)', 'JetBrains Mono', 'monospace'],
+        'mono': ['var(--font-jetbrains-mono)', 'JetBrains Mono', 'monospace'],
       },
       colors: {
         retro: {

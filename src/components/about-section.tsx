@@ -126,26 +126,22 @@ export default function AboutSection() {
                     <span className="text-gray-500 dark:text-gray-400">Enfoque:</span>
                     <span className="text-purple-600 dark:text-purple-400">Frontend & Backend</span>
                   </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-500 dark:text-gray-400">Experiencia:</span>
-                    <span className="text-yellow-600 dark:text-yellow-400">3+ años</span>
-                  </div>
+
                   
                   <div className="flex items-center justify-between">
                     <span className="text-gray-500 dark:text-gray-400">Ubicación:</span>
-                    <span className="text-cyan-600 dark:text-cyan-400">Remote Ready</span>
+                    <span className="text-cyan-600 dark:text-cyan-400">Mendoza,Argentina</span>
                   </div>
                 </div>
                 
                 <div className="mt-4 sm:mt-6 pt-4 border-t border-gray-300 dark:border-gray-700">
                   <div className="flex justify-center space-x-4 sm:space-x-6">
                     <div className="text-center">
-                      <div className="text-xl sm:text-2xl font-bold text-cyan-600 dark:text-cyan-400">15+</div>
+                      <div className="text-xl sm:text-2xl font-bold text-cyan-600 dark:text-cyan-400">4</div>
                       <div className="text-xs text-gray-500 dark:text-gray-400">Proyectos</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-xl sm:text-2xl font-bold text-purple-600 dark:text-purple-400">10+</div>
+                      <div className="text-xl sm:text-2xl font-bold text-purple-600 dark:text-purple-400">15</div>
                       <div className="text-xs text-gray-500 dark:text-gray-400">Tecnologías</div>
                     </div>
                     <div className="text-center">
@@ -156,16 +152,6 @@ export default function AboutSection() {
                 </div>
               </div>
               
-              {/* Elementos flotantes - Solo visibles en pantallas grandes */}
-              <div className="hidden lg:block absolute -top-4 -right-4 text-cyan-400 text-sm animate-bounce">
-                💻
-              </div>
-              <div className="hidden lg:block absolute -bottom-4 -left-4 text-purple-400 text-sm animate-pulse">
-                🚀
-              </div>
-              <div className="hidden lg:block absolute top-1/2 -left-8 text-yellow-400 text-xs animate-ping">
-                ⭐
-              </div>
             </div>
           </div>
         </div>
