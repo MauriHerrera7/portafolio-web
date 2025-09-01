@@ -1,0 +1,16 @@
+# CV Placeholder
+
+Este es un archivo placeholder para tu CV. 
+
+Para usar la funcionalidad de descarga del CV:
+1. Coloca tu archivo CV real (en formato PDF) en la carpeta `public/` 
+2. Nómbralo como `cv.pdf`
+3. El botón de descarga en tu portafolio funcionará automáticamente
+
+El CV debería incluir:
+- Información personal y de contacto
+- Experiencia laboral
+- Educación
+- Habilidades técnicas
+- Proyectos destacados
+- Referencias (opcional)

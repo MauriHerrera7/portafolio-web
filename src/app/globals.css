@@ -24,3 +24,496 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom Neon Border Animation for Profile Picture */
+.profile-neon-border {
+  position: relative;
+  animation: neon-pulse 2s ease-in-out infinite alternate;
+}
+
+.profile-neon-border::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: linear-gradient(45deg, #00ffff, #0099ff, #00ffff, #00ccff);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(8px);
+  animation: neon-rotate 4s linear infinite;
+}
+
+.profile-neon-border::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, #00ffff, #0099ff, #00ffff, #00ccff);
+  border-radius: 50%;
+  z-index: -1;
+  animation: neon-rotate-reverse 3s linear infinite;
+}
+
+@keyframes neon-pulse {
+  0% {
+    filter: drop-shadow(0 0 20px #00ffff) drop-shadow(0 0 40px #00ffff) drop-shadow(0 0 60px #00ffff);
+  }
+  100% {
+    filter: drop-shadow(0 0 30px #00ffff) drop-shadow(0 0 60px #00ffff) drop-shadow(0 0 90px #00ffff);
+  }
+}
+
+@keyframes neon-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes neon-rotate-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Animaciones futuristas para la foto de perfil */
+@keyframes holographic-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 30px rgba(0, 255, 255, 0.4)) drop-shadow(0 0 45px rgba(59, 130, 246, 0.6));
+  }
+  25% {
+    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.9)) drop-shadow(0 0 40px rgba(59, 130, 246, 0.5)) drop-shadow(0 0 60px rgba(168, 85, 247, 0.7));
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(168, 85, 247, 0.8)) drop-shadow(0 0 50px rgba(168, 85, 247, 0.4)) drop-shadow(0 0 75px rgba(0, 255, 255, 0.6));
+  }
+  75% {
+    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.9)) drop-shadow(0 0 40px rgba(59, 130, 246, 0.5)) drop-shadow(0 0 60px rgba(59, 130, 246, 0.7));
+  }
+}
+
+@keyframes profile-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes scan-vertical {
+  0% {
+    top: -2px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes holographic-shift {
+  0% {
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.1) 0%, rgba(59, 130, 246, 0.05) 50%, rgba(168, 85, 247, 0.1) 100%);
+    transform: rotate(0deg);
+  }
+  33% {
+    background: linear-gradient(45deg, rgba(59, 130, 246, 0.1) 0%, rgba(168, 85, 247, 0.05) 50%, rgba(0, 255, 255, 0.1) 100%);
+    transform: rotate(1deg);
+  }
+  66% {
+    background: linear-gradient(45deg, rgba(168, 85, 247, 0.1) 0%, rgba(0, 255, 255, 0.05) 50%, rgba(59, 130, 246, 0.1) 100%);
+    transform: rotate(-1deg);
+  }
+  100% {
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.1) 0%, rgba(59, 130, 246, 0.05) 50%, rgba(168, 85, 247, 0.1) 100%);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes data-flow {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(45deg);
+  }
+}
+
+/* Aurora Boreal Animations */
+@keyframes aurora-wave-1 {
+  0%, 100% {
+    transform: translateX(-50%) skewY(-3deg) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateX(-30%) skewY(-2deg) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes aurora-wave-2 {
+  0%, 100% {
+    transform: translateX(50%) skewY(2deg) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateX(30%) skewY(3deg) scale(1.2);
+    opacity: 0.5;
+  }
+}
+
+@keyframes aurora-wave-3 {
+  0%, 100% {
+    transform: translateX(-20%) skewY(-1deg) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateX(-40%) skewY(-2deg) scale(1.15);
+    opacity: 0.55;
+  }
+}
+
+@keyframes aurora-wave-4 {
+  0%, 100% {
+    transform: translateX(20%) skewY(1deg) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateX(40%) skewY(2deg) scale(1.25);
+    opacity: 0.4;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scale(1); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.2); 
+  }
+}
+
+/* Aurora CSS Classes */
+.aurora-wave-1 {
+  animation: aurora-wave-1 8s ease-in-out infinite;
+}
+
+.aurora-wave-2 {
+  animation: aurora-wave-2 10s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.aurora-wave-3 {
+  animation: aurora-wave-3 12s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.aurora-wave-4 {
+  animation: aurora-wave-4 9s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+/* Contact Form Glass Effect */
+.glass-effect {
+  background: rgba(17, 25, 40, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* Contact Form Neon Glow Effect */
+.form-neon-glow {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(59, 130, 246, 0.08), rgba(0, 255, 255, 0.05));
+  backdrop-filter: blur(20px);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(0, 255, 255, 0.3),
+    0 0 0 2px rgba(59, 130, 246, 0.2),
+    inset 0 0 30px rgba(0, 255, 255, 0.08),
+    0 0 50px rgba(0, 255, 255, 0.15),
+    0 0 80px rgba(59, 130, 246, 0.1);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.form-neon-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 255, 0.3),
+    rgba(59, 130, 246, 0.2),
+    transparent
+  );
+  transition: left 0.8s ease;
+}
+
+.form-neon-glow:hover::before {
+  left: 100%;
+}
+
+.form-neon-glow:hover {
+  border-color: rgba(0, 255, 255, 0.5);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(0, 255, 255, 0.5),
+    0 0 0 2px rgba(59, 130, 246, 0.3),
+    inset 0 0 40px rgba(0, 255, 255, 0.15),
+    0 0 80px rgba(0, 255, 255, 0.3),
+    0 0 120px rgba(59, 130, 246, 0.2);
+  transform: translateY(-2px);
+}
+
+@keyframes neon-pulse-form {
+  0%, 100% {
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      0 0 0 1px rgba(0, 255, 255, 0.3),
+      0 0 0 2px rgba(59, 130, 246, 0.2),
+      inset 0 0 30px rgba(0, 255, 255, 0.08),
+      0 0 50px rgba(0, 255, 255, 0.15),
+      0 0 80px rgba(59, 130, 246, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.15),
+      0 0 0 1px rgba(0, 255, 255, 0.4),
+      0 0 0 2px rgba(59, 130, 246, 0.3),
+      inset 0 0 40px rgba(0, 255, 255, 0.12),
+      0 0 70px rgba(0, 255, 255, 0.25),
+      0 0 100px rgba(59, 130, 246, 0.15);
+  }
+}
+
+.form-neon-pulse {
+  animation: neon-pulse-form 4s ease-in-out infinite;
+}
+
+/* Enhanced Input Styles */
+.neon-input {
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.05), rgba(59, 130, 246, 0.03)) !important;
+  border: 2px solid transparent !important;
+  border-image: linear-gradient(45deg, rgba(0, 255, 255, 0.3), rgba(59, 130, 246, 0.2)) 1 !important;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease !important;
+}
+
+.neon-input:focus {
+  border-image: linear-gradient(45deg, rgba(0, 255, 255, 0.7), rgba(59, 130, 246, 0.5)) 1 !important;
+  box-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.4),
+    0 0 30px rgba(59, 130, 246, 0.2),
+    inset 0 0 20px rgba(0, 255, 255, 0.15) !important;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(59, 130, 246, 0.05)) !important;
+}
+
+/* Enhanced Button Styles */
+.neon-button {
+  background: linear-gradient(135deg, #00ffff, #3b82f6, #00e6e6, #2563eb);
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, rgba(0, 255, 255, 0.6), rgba(59, 130, 246, 0.4)) 1;
+  box-shadow: 
+    0 0 30px rgba(0, 255, 255, 0.4),
+    0 0 40px rgba(59, 130, 246, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.neon-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.neon-button:hover::before {
+  left: 100%;
+}
+
+.neon-button:hover {
+  box-shadow: 
+    0 0 40px rgba(0, 255, 255, 0.6),
+    0 0 50px rgba(59, 130, 246, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* Contact card hover animations */
+.contact-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-card:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Social links hover effects */
+.contact-card a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-card a:hover {
+  text-decoration: none;
+}
+
+/* GitHub and LinkedIn specific hover effects */
+.contact-card:has(a[href*="github"]):hover {
+  border-color: #6366f1 !important;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3) !important;
+}
+
+.contact-card:has(a[href*="linkedin"]):hover {
+  border-color: #0ea5e9 !important;
+  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3) !important;
+}
+
+/* Pulse animation for loading states */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 
+      0 0 20px rgba(0, 255, 255, 0.5),
+      0 0 30px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 
+      0 0 40px rgba(0, 255, 255, 0.7),
+      0 0 50px rgba(59, 130, 246, 0.5);
+  }
+}
+
+.pulse-loading {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Success message animation */
+@keyframes slideInSuccess {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.success-message {
+  animation: slideInSuccess 0.5s ease-out;
+}
+
+/* Error message animation */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.error-message {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Icon animation effects */
+@keyframes iconBounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.icon-bounce:hover {
+  animation: iconBounce 0.6s ease-in-out;
+}
+
+/* Enhanced icon visibility */
+.contact-card .icon-bounce {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .icon-bounce {
+  filter: drop-shadow(0 4px 8px rgba(0, 255, 255, 0.3));
+}
+
+/* Enhanced disabled state for button */
+.neon-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  background: linear-gradient(135deg, #64748b, #6b7280);
+  border-color: rgba(156, 163, 175, 0.3);
+  box-shadow: none;
+}
+
+.neon-button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.neon-button:disabled::before {
+  display: none;
+}
