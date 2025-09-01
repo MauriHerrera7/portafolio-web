@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
-import "./globals.css";
+import "./globals-clean.css";
 import { Providers } from "@/components/providers";
 
 const inter = Inter({
@@ -28,9 +28,9 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
-        {/* Favicon personalizado, elimina el de Next.js por defecto */}
-        <link rel="icon" href="/navegador-web.png" type="image/png" />
-        <link rel="shortcut icon" href="/navegador-web.png" type="image/png" />
+        {/* Favicon personalizado */}
+        <link rel="icon" href="/logo.png" type="image/png" />
+        <link rel="shortcut icon" href="/logo.png" type="image/png" />
       </head>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
