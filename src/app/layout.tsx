@@ -27,6 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
+      <head>
+        {/* Favicon personalizado, elimina el de Next.js por defecto */}
+        <link rel="icon" href="/navegador-web.png" type="image/png" />
+        <link rel="shortcut icon" href="/navegador-web.png" type="image/png" />
+      </head>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >

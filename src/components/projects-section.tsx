@@ -166,28 +166,22 @@ const getTechIcon = (tech: string) => {
 
 export default function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null)
-  const [isMounted, setIsMounted] = useState(false)
+  const [showParticles, setShowParticles] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true)
-  }, [])
+    setShowParticles(true);
+  }, []);
 
   useEffect(() => {
     if (selectedProject) {
-      document.body.classList.add('modal-open')
+      document.body.classList.add('modal-open');
     } else {
-      document.body.classList.remove('modal-open')
+      document.body.classList.remove('modal-open');
     }
-
-    // Cleanup function to remove class on unmount
     return () => {
-      document.body.classList.remove('modal-open')
-    }
-  }, [selectedProject])
-
-  if (!isMounted) {
-    return <div className="py-20 bg-white dark:bg-gray-900 text-gray-900 dark:text-white">Cargando...</div>
-  }
+      document.body.classList.remove('modal-open');
+    };
+  }, [selectedProject]);
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -216,8 +210,8 @@ export default function ProjectsSection() {
           <div className="absolute inset-0 opacity-10">
             <div className="h-full w-full bg-gradient-to-r from-transparent via-cyan-600/20 dark:via-cyan-500/20 to-transparent animate-pulse"></div>
           </div>
-          {/* Floating particles */}
-          {isMounted && [...Array(50)].map((_, i) => (
+          {/* Floating particles (solo en cliente) */}
+          {showParticles && [...Array(50)].map((_, i) => (
             <div
               key={`particle-${i}`}
               className="absolute w-1 h-1 bg-cyan-600 dark:bg-cyan-400 rounded-full animate-pulse"
@@ -230,7 +224,7 @@ export default function ProjectsSection() {
             />
           ))}
           {/* Additional glowing particles */}
-          {isMounted && [...Array(30)].map((_, i) => (
+          {showParticles && [...Array(30)].map((_, i) => (
             <div
               key={`glow-${i}`}
               className="absolute w-2 h-2 bg-blue-600/30 dark:bg-blue-500/30 rounded-full animate-pulse"
@@ -244,7 +238,7 @@ export default function ProjectsSection() {
             />
           ))}
           {/* Micro particles */}
-          {isMounted && [...Array(40)].map((_, i) => (
+          {showParticles && [...Array(40)].map((_, i) => (
             <div
               key={`micro-${i}`}
               className="absolute w-0.5 h-0.5 bg-purple-600 dark:bg-purple-400 rounded-full animate-pulse"
@@ -257,7 +251,7 @@ export default function ProjectsSection() {
             />
           ))}
           {/* Large floating orbs */}
-          {isMounted && [...Array(8)].map((_, i) => (
+          {showParticles && [...Array(8)].map((_, i) => (
             <div
               key={`orb-${i}`}
               className="absolute w-3 h-3 bg-gradient-to-r from-cyan-600/20 dark:from-cyan-400/20 to-blue-600/20 dark:to-blue-500/20 rounded-full animate-pulse"
