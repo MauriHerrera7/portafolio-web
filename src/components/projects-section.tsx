@@ -81,7 +81,7 @@ const projects = [
     image: "https://res.cloudinary.com/dry6dvzoj/image/upload/v1756620795/WhatsApp_Image_2025-08-31_at_03.12.58_smmum5.jpg",
     technologies: ["Next.js", "TailwindCSS", "Flowbite", "TypeScript", "OAuth2", "Stripe", "Render"],
     github: "https://github.com/PsyMatch/PsyMatch-Frontend",
-    demo: "https://psymatch-frontend-app.onrender.com/",
+    demo: "https://psy-match-frontend.vercel.app/",
     status: "DEPLOYED",
     category: "FRONTEND",
     features: [
