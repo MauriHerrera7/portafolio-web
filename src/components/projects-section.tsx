@@ -339,10 +339,16 @@ export default function ProjectsSection() {
                   {/* View demo button overlay */}
                   {!(project.title === "CINETRACK" || project.title === "ANIMAL" || project.title === "ECOMMERCE API") && (
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-100 scale-95">
-                      <div className="bg-white/80 dark:bg-black/80 backdrop-blur-sm border border-cyan-600/50 dark:border-cyan-400/50 rounded-lg px-4 sm:px-6 py-2 sm:py-3 flex items-center gap-2 text-cyan-600 dark:text-cyan-400 font-mono font-bold text-sm">
-                        <Eye className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="bg-white/80 dark:bg-black/80 backdrop-blur-sm border border-cyan-600/50 dark:border-cyan-400/50 rounded-lg px-4 sm:px-6 py-2 sm:py-3 flex items-center gap-2 text-cyan-600 dark:text-cyan-400 font-mono font-bold text-sm hover:bg-white/90 dark:hover:bg-black/90 hover:border-cyan-500/70 dark:hover:border-cyan-300/70 transition-all duration-300"
+                      >
+                        <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
                         {(project.title === "PSYMATCH" || project.title === "PSYMATCH BACKEND") ? "VER PÁGINA" : "VER DEMO"}
-                      </div>
+                      </a>
                     </div>
                   )}
                 </div>
@@ -403,18 +409,18 @@ export default function ProjectsSection() {
                       </a>
                     )}
                     {!(project.title === "CINETRACK" || project.title === "ANIMAL" || project.title === "ECOMMERCE API") && (
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation()
-                          setSelectedProject(project)
-                        }}
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         className="flex-1 group/btn relative overflow-hidden bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-500 hover:to-purple-500 text-white font-mono font-bold text-xs sm:text-sm rounded-lg px-3 sm:px-4 py-2 sm:py-3 transition-all duration-500 flex items-center justify-center shadow-lg shadow-cyan-500/25"
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
-                        <Play className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2 relative z-10" />
+                        <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2 relative z-10" />
                         <span className="relative z-10 hidden sm:inline">{(project.title === "PSYMATCH" || project.title === "PSYMATCH BACKEND") ? "PÁGINA" : "DEMO"}</span>
                         <span className="relative z-10 sm:hidden">{(project.title === "PSYMATCH" || project.title === "PSYMATCH BACKEND") ? "VER" : "DEMO"}</span>
-                      </button>
+                      </a>
                     )}
                   </div>
                 </div>
