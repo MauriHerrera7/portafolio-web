@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         'sans': ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
         'retro': ['Orbitron', 'monospace'],
+        'futuristic': ['var(--font-rajdhani)', 'Rajdhani', 'sans-serif'],
         'code': ['var(--font-jetbrains-mono)', 'JetBrains Mono', 'monospace'],
         'mono': ['var(--font-jetbrains-mono)', 'JetBrains Mono', 'monospace'],
       },

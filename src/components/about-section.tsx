@@ -1,24 +1,24 @@
 'use client';
 
 import Image from 'next/image';
-import { 
-  FaReact, 
-  FaHtml5, 
-  FaCss3Alt, 
-  FaJs, 
-  FaNodeJs, 
-  FaJava, 
-  FaDocker, 
-  FaGithub 
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaNodeJs,
+  FaJava,
+  FaDocker,
+  FaGithub
 } from 'react-icons/fa';
-import { 
-  SiNextdotjs, 
-  SiTailwindcss, 
-  SiExpress, 
-  SiNestjs, 
-  SiMongodb, 
-  SiPostgresql, 
-  SiCplusplus 
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiExpress,
+  SiNestjs,
+  SiMongodb,
+  SiPostgresql,
+  SiCplusplus
 } from 'react-icons/si';
 
 export default function AboutSection() {
@@ -45,34 +45,34 @@ export default function AboutSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           <div className="order-2 lg:order-1">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-cyan-600 dark:text-cyan-400 mb-6 sm:mb-8 text-center lg:text-left">
-              Sobre Mí
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-futuristic text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 dark:from-cyan-300 dark:via-blue-300 dark:to-purple-300 mb-6 sm:mb-8 text-center lg:text-left tracking-wide drop-shadow-lg">
+              SOBRE MÍ
             </h2>
-            
-            <div className="bg-gray-100 dark:bg-black/50 border-2 border-cyan-600 dark:border-cyan-400 rounded-lg p-4 sm:p-6 mb-6 sm:mb-8">
-              <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                Soy un desarrollador Full Stack apasionado por crear soluciones innovadoras 
-                y experiencias digitales excepcionales. Me especializo en tecnologías modernas 
+
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-black/50 border-2 border-cyan-500/50 dark:border-cyan-400/50 rounded-lg p-4 sm:p-6 mb-6 sm:mb-8 backdrop-blur-sm">
+              <p className="text-base sm:text-lg font-futuristic text-gray-700 dark:text-gray-200 mb-4 leading-relaxed font-light">
+                Soy un desarrollador Full Stack apasionado por crear soluciones innovadoras
+                y experiencias digitales excepcionales. Me especializo en tecnologías modernas
                 y siempre estoy buscando nuevos desafíos que me permitan crecer profesionalmente.
               </p>
-              <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                Con experiencia tanto en frontend como backend, disfruto construyendo 
-                aplicaciones completas que no solo funcionen perfectamente, sino que 
+              <p className="text-base sm:text-lg font-futuristic text-gray-700 dark:text-gray-200 leading-relaxed font-light">
+                Con experiencia tanto en frontend como backend, disfruto construyendo
+                aplicaciones completas que no solo funcionen perfectamente, sino que
                 también brinden una experiencia de usuario memorable.
               </p>
             </div>
-            
-            <div className="bg-gray-100 dark:bg-black/50 border-2 border-purple-600 dark:border-purple-500 rounded-lg p-4 sm:p-6">
-              <h3 className="text-xl sm:text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4 sm:mb-6 flex items-center justify-center lg:justify-start">
+
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-black/50 border-2 border-blue-500/50 dark:border-blue-400/50 rounded-lg p-4 sm:p-6 backdrop-blur-sm">
+              <h3 className="text-xl sm:text-2xl font-bold font-futuristic text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-300 dark:to-cyan-300 mb-4 sm:mb-6 flex items-center justify-center lg:justify-start tracking-wide drop-shadow-md">
                 <span className="mr-3">💡</span>
-                Habilidades Técnicas
+                HABILIDADES TÉCNICAS
               </h3>
-              
+
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
                 {skills.map((skill, index) => {
                   const IconComponent = skill.icon;
                   return (
-                    <div 
+                    <div
                       key={skill.name}
                       className="flex flex-col items-center group hover:scale-110 transition-all duration-300"
                       style={{ animationDelay: `${index * 0.1}s` }}
@@ -89,7 +89,7 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-          
+
           <div className="order-1 lg:order-2 flex justify-center">
             <div className="relative w-full max-w-sm">
               <div className="bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 border-2 border-cyan-600 dark:border-cyan-400 rounded-xl p-4 sm:p-6 lg:p-8 w-full">
@@ -112,7 +112,7 @@ export default function AboutSection() {
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">Mauricio Herrera</h3>
                   <p className="text-cyan-600 dark:text-cyan-400 font-medium text-sm sm:text-base">Full Stack Developer</p>
                 </div>
-                
+
                 <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <div className="flex items-center justify-between">
                     <span className="text-gray-500 dark:text-gray-400">Estado:</span>
@@ -121,19 +121,19 @@ export default function AboutSection() {
                       Disponible
                     </span>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-gray-500 dark:text-gray-400">Enfoque:</span>
                     <span className="text-purple-600 dark:text-purple-400">Frontend & Backend</span>
                   </div>
 
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-gray-500 dark:text-gray-400">Ubicación:</span>
                     <span className="text-cyan-600 dark:text-cyan-400">Mendoza,Argentina</span>
                   </div>
                 </div>
-                
+
                 <div className="mt-4 sm:mt-6 pt-4 border-t border-gray-300 dark:border-gray-700">
                   <div className="flex justify-center space-x-4 sm:space-x-6">
                     <div className="text-center">
@@ -151,7 +151,7 @@ export default function AboutSection() {
                   </div>
                 </div>
               </div>
-              
+
             </div>
           </div>
         </div>

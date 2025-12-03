@@ -12,7 +12,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-screen py-20 lg:py-0">
         {/* Left side - Content */}
         <div className="w-full lg:max-w-2xl text-center lg:text-left mb-12 lg:mb-0">
-          <p className="text-cyan-600 dark:text-cyan-400 text-base sm:text-lg mb-4">Hola Mundo, Soy Mauricio</p>
+          <p className="text-cyan-600 dark:text-cyan-400 text-base sm:text-lg mb-4">Hola , Soy Mauricio</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="text-gray-900 dark:text-white">Desarrollador Web</span><br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 dark:from-cyan-400 to-blue-600 dark:to-blue-400">Full Stack</span>

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { ExternalLink, Github, Code2, Zap, X, Play, Eye, Database, Server, Globe } from 'lucide-react'
-import { 
+import {
   SiReact, SiJavascript, SiHtml5, SiCss3, SiBootstrap, SiExpress, SiMongodb, SiNodedotjs,
   SiPostgresql, SiNextdotjs, SiTypescript, SiTailwindcss, SiStripe, SiPython, SiThreedotjs,
   SiSocketdotio, SiTensorflow, SiPrisma, SiWebgl, SiNestjs, SiDocker, SiSwagger, SiCloudinary,
@@ -38,7 +38,7 @@ const projects = [
     longDescription: "Animal es una aplicación web completa para la gestión de turnos de canchas deportivas que permite a los usuarios registrarse, autenticarse y reservar canchas de manera eficiente. Incluye un sistema robusto de autenticación, gestión de reservas en tiempo real, manejo de formularios dinámicos y una base de datos PostgreSQL para persistencia de datos.",
     image: "https://res.cloudinary.com/dry6dvzoj/image/upload/v1756617348/image_1_fcfeez.jpg",
     technologies: ["React", "PostgreSQL", "Express.js", "Nodemon", "Node.js", "JavaScript", "CSS3"],
-  github: "https://github.com/MauriHerrera7/Animal-Canchas",
+    github: "https://github.com/MauriHerrera7/Animal-Canchas",
     demo: "https://animal-turnos-demo.com",
     status: "COMPLETED",
     category: "FULLSTACK",
@@ -59,7 +59,7 @@ const projects = [
     longDescription: "API REST robusta y escalable para ecommerce construida con NestJS y TypeScript. Incluye autenticación JWT, gestión de productos, manejo de imágenes con Cloudinary, documentación automática con Swagger y contenedorización con Docker. Diseñada siguiendo principios SOLID y arquitectura hexagonal.",
     image: "https://res.cloudinary.com/dry6dvzoj/image/upload/v1756619588/WhatsApp_Image_2025-08-31_at_02.52.51_jvpzoq.jpg",
     technologies: ["NestJS", "TypeScript", "PostgreSQL", "Docker", "Swagger", "Cloudinary", "JWT"],
-  github: "https://github.com/MauriHerrera7/E-commerce-api",
+    github: "https://github.com/MauriHerrera7/E-commerce-api",
     demo: "https://ecommerce-api-docs.com",
     status: "COMPLETED",
     category: "BACKEND API",
@@ -121,6 +121,31 @@ const projects = [
       "Gestión de consultas y pacientes",
       "Contenedorización con Docker"
     ]
+  },
+  {
+    id: 6,
+    title: "FORCEGYM",
+    description: "Plataforma web completa para gestión de gimnasios con sistema de usuarios, planes de entrenamiento, seguimiento de progreso y administración de membresías.",
+    longDescription: "ForceGym es una aplicación web moderna diseñada para la gestión integral de gimnasios. Permite a los usuarios registrarse, gestionar sus rutinas de entrenamiento, hacer seguimiento de su progreso físico y administrar sus membresías. Incluye un panel administrativo completo para la gestión de clientes, planes y estadísticas del gimnasio.",
+    image: "https://res.cloudinary.com/dry6dvzoj/image/upload/v1764796469/force_gym_captura_szrwp6.jpg",
+    technologies: ["Next.js", "TypeScript", "TailwindCSS", "NestJS", "PostgreSQL", "Prisma"],
+    github: "https://github.com/MauriHerrera7/ForceGym",
+    demo: "https://forcegym-demo.com",
+    status: "COMPLETED",
+    category: "FULLSTACK",
+    features: [
+      "Sistema de autenticación completo",
+      "integracion de pagos con mercado pago",
+      "qr code para ingresar al establecimiento",
+      "Gestión de usuarios y perfiles",
+      "Planes de entrenamiento personalizados",
+      "Seguimiento de progreso físico",
+      "Sistema de membresías",
+      "Panel administrativo completo",
+      "Dashboard con estadísticas",
+      "Interfaz responsive moderna",
+      "Base de datos PostgreSQL con Prisma"
+    ]
   }
 ]
 
@@ -128,7 +153,7 @@ const projects = [
 const getTechIcon = (tech: string) => {
   const techLower = tech.toLowerCase();
   const iconProps = { size: 20, className: "text-cyan-600 dark:text-cyan-400" };
-  
+
   if (techLower.includes('react')) return <SiReact {...iconProps} />;
   if (techLower.includes('javascript')) return <SiJavascript {...iconProps} />;
   if (techLower.includes('html')) return <SiHtml5 {...iconProps} />;
@@ -159,7 +184,7 @@ const getTechIcon = (tech: string) => {
   if (techLower.includes('render')) return <SiRender {...iconProps} />;
   if (techLower.includes('d3')) return <Code2 {...iconProps} />;
   if (techLower.includes('openai')) return <Zap {...iconProps} />;
-  
+
   // Icono por defecto
   return <Code2 {...iconProps} />;
 };
@@ -275,7 +300,7 @@ export default function ProjectsSection() {
           {/* Futuristic header */}
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <div className="relative inline-block">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 dark:from-blue-400 via-blue-700 dark:via-blue-500 to-cyan-600 dark:to-cyan-400 mb-6 sm:mb-8 relative tracking-wider">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black font-futuristic text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 dark:from-cyan-300 dark:via-blue-300 dark:to-purple-300 mb-6 sm:mb-8 relative tracking-wider drop-shadow-2xl">
                 PROYECTOS
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-600/20 dark:from-blue-500/20 via-blue-600/20 dark:via-blue-500/20 to-cyan-600/20 dark:to-cyan-500/20 blur-xl"></div>
               </h2>
@@ -319,8 +344,8 @@ export default function ProjectsSection() {
                 {/* Image section */}
                 <div className="h-48 sm:h-56 lg:h-64 bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 dark:from-gray-800 dark:via-gray-900 dark:to-black relative overflow-hidden transition-colors duration-300">
                   {project.image !== "/api/placeholder/400/300" ? (
-                    <Image 
-                      src={project.image} 
+                    <Image
+                      src={project.image}
                       alt={project.title}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -337,7 +362,7 @@ export default function ProjectsSection() {
                     <div className="absolute w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-600 dark:via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-scan transition-opacity duration-500"></div>
                   </div>
                   {/* View demo button overlay */}
-                  {!(project.title === "CINETRACK" || project.title === "ANIMAL" || project.title === "ECOMMERCE API") && (
+                  {!(project.title === "CINETRACK" || project.title === "ANIMAL" || project.title === "ECOMMERCE API" || project.title === "FORCEGYM") && (
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-100 scale-95">
                       <a
                         href={project.demo}
@@ -396,11 +421,10 @@ export default function ProjectsSection() {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`$${
-                          project.title === "ANIMAL" || project.title === "ECOMMERCE API" 
-                            ? "w-full" 
-                            : "flex-1"
-                        } group/btn relative overflow-hidden bg-gradient-to-r from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-700 hover:from-green-500 hover:to-emerald-500 border border-gray-400 dark:border-gray-600 hover:border-green-400 text-gray-700 dark:text-gray-300 hover:text-white font-mono font-bold text-xs sm:text-sm rounded-lg px-3 sm:px-4 py-2 sm:py-3 transition-all duration-500 flex items-center justify-center`}
+                        className={`${project.title === "ANIMAL" || project.title === "ECOMMERCE API" || project.title === "FORCEGYM"
+                          ? "w-full"
+                          : "flex-1"
+                          } group/btn relative overflow-hidden bg-gradient-to-r from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-700 hover:from-green-500 hover:to-emerald-500 border border-gray-400 dark:border-gray-600 hover:border-green-400 text-gray-700 dark:text-gray-300 hover:text-white font-mono font-bold text-xs sm:text-sm rounded-lg px-3 sm:px-4 py-2 sm:py-3 transition-all duration-500 flex items-center justify-center`}
                         onClick={(e) => e.stopPropagation()}
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
@@ -408,7 +432,7 @@ export default function ProjectsSection() {
                         <span className="relative z-10 hidden sm:inline">CODE</span>
                       </a>
                     )}
-                    {!(project.title === "CINETRACK" || project.title === "ANIMAL" || project.title === "ECOMMERCE API") && (
+                    {!(project.title === "CINETRACK" || project.title === "ANIMAL" || project.title === "ECOMMERCE API" || project.title === "FORCEGYM") && (
                       <a
                         href={project.demo}
                         target="_blank"
@@ -432,13 +456,13 @@ export default function ProjectsSection() {
 
       {/* Modal */}
       {selectedProject && (
-        <div 
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4 modal-overlay" 
+        <div
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4 modal-overlay"
           style={{ cursor: 'default' }}
           onClick={() => setSelectedProject(null)}
         >
-          <div 
-            className="bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-black dark:to-gray-900 border border-cyan-600/50 dark:border-cyan-500/50 rounded-xl sm:rounded-2xl max-w-4xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto relative text-gray-900 dark:text-white" 
+          <div
+            className="bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-black dark:to-gray-900 border border-cyan-600/50 dark:border-cyan-500/50 rounded-xl sm:rounded-2xl max-w-4xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto relative text-gray-900 dark:text-white"
             style={{ cursor: 'default' }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -449,7 +473,7 @@ export default function ProjectsSection() {
             >
               <X className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
-            
+
             {/* Header */}
             <div className="p-4 sm:p-6 border-b border-gray-300/50 dark:border-gray-700/50">
               <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-4 gap-3 sm:gap-4">
@@ -469,14 +493,14 @@ export default function ProjectsSection() {
                 </div>
               </div>
             </div>
-            
+
             {/* Content */}
             <div className="p-4 sm:p-6">
               {/* Image */}
               <div className="mb-4 sm:mb-6 rounded-lg overflow-hidden border border-gray-300/50 dark:border-gray-700/50 relative h-48 sm:h-56 lg:h-64">
                 {selectedProject.image !== "/api/placeholder/400/300" ? (
-                  <Image 
-                    src={selectedProject.image} 
+                  <Image
+                    src={selectedProject.image}
                     alt={selectedProject.title}
                     fill
                     className="object-cover"
@@ -487,7 +511,7 @@ export default function ProjectsSection() {
                   </div>
                 )}
               </div>
-              
+
               {/* Description */}
               <div className="mb-4 sm:mb-6">
                 <h3 className="text-lg sm:text-xl font-bold text-cyan-600 dark:text-cyan-400 mb-2 sm:mb-3 font-mono">DESCRIPCIÓN COMPLETA</h3>
@@ -495,7 +519,7 @@ export default function ProjectsSection() {
                   {selectedProject.longDescription}
                 </p>
               </div>
-              
+
               {/* Features */}
               <div className="mb-4 sm:mb-6">
                 <h3 className="text-lg sm:text-xl font-bold text-purple-600 dark:text-purple-400 mb-2 sm:mb-3 font-mono">CARACTERÍSTICAS</h3>
@@ -508,7 +532,7 @@ export default function ProjectsSection() {
                   ))}
                 </div>
               </div>
-              
+
               {/* Technologies */}
               <div className="mb-6 sm:mb-8">
                 <h3 className="text-lg sm:text-xl font-bold text-green-600 dark:text-green-400 mb-2 sm:mb-3 font-mono">TECNOLOGÍAS</h3>
@@ -525,21 +549,21 @@ export default function ProjectsSection() {
                   ))}
                 </div>
               </div>
-              
+
               {/* Action buttons */}
-              <div className={`flex ${selectedProject.title === "CINETRACK" || selectedProject.title === "ANIMAL" || selectedProject.title === "ECOMMERCE API" ? "justify-center" : "flex-col sm:flex-row"} gap-3 sm:gap-4`}>
+              <div className={`flex ${selectedProject.title === "CINETRACK" || selectedProject.title === "ANIMAL" || selectedProject.title === "ECOMMERCE API" || selectedProject.title === "FORCEGYM" ? "justify-center" : "flex-col sm:flex-row"} gap-3 sm:gap-4`}>
                 {selectedProject.title !== "CINETRACK" ? (
                   <a
                     href={selectedProject.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${selectedProject.title === "ANIMAL" || selectedProject.title === "ECOMMERCE API" ? "max-w-sm" : "flex-1"} bg-gradient-to-r from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-700 hover:from-green-500 hover:to-emerald-500 border border-gray-400 dark:border-gray-600 hover:border-green-400 text-gray-700 dark:text-gray-300 hover:text-white font-mono font-bold text-sm sm:text-base lg:text-lg rounded-lg sm:rounded-xl px-4 sm:px-6 py-3 sm:py-4 transition-all duration-500 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer hover:scale-105`}
+                    className={`${selectedProject.title === "ANIMAL" || selectedProject.title === "ECOMMERCE API" || selectedProject.title === "FORCEGYM" ? "max-w-sm" : "flex-1"} bg-gradient-to-r from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-700 hover:from-green-500 hover:to-emerald-500 border border-gray-400 dark:border-gray-600 hover:border-green-400 text-gray-700 dark:text-gray-300 hover:text-white font-mono font-bold text-sm sm:text-base lg:text-lg rounded-lg sm:rounded-xl px-4 sm:px-6 py-3 sm:py-4 transition-all duration-500 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer hover:scale-105`}
                   >
                     <Github className="h-4 w-4 sm:h-5 sm:w-5" />
                     VER CÓDIGO
                   </a>
                 ) : null}
-                {!(selectedProject.title === "CINETRACK" || selectedProject.title === "ANIMAL" || selectedProject.title === "ECOMMERCE API") && (
+                {!(selectedProject.title === "CINETRACK" || selectedProject.title === "ANIMAL" || selectedProject.title === "ECOMMERCE API" || selectedProject.title === "FORCEGYM") && (
                   <a
                     href={selectedProject.demo}
                     target="_blank"
