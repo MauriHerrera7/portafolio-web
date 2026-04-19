@@ -4,7 +4,7 @@ import {
   SiReact, SiJavascript, SiHtml5, SiCss3, SiBootstrap, SiExpress, SiMongodb, SiNodedotjs, 
   SiPostgresql, SiNextdotjs, SiTypescript, SiTailwindcss, SiStripe, SiPython, SiThreedotjs, 
   SiSocketdotio, SiTensorflow, SiPrisma, SiWebgl, SiNestjs, SiDocker, SiSwagger, SiCloudinary, 
-  SiJsonwebtokens, SiAuth0, SiRender 
+  SiJsonwebtokens, SiAuth0, SiRender, SiWhatsapp, SiGooglesheets 
 } from 'react-icons/si';
 import { Code2, Zap } from 'lucide-react';
 
@@ -48,6 +48,8 @@ export const TechIcon: React.FC<TechIconProps> = ({ tech, size = 20, className =
   if (techLower.includes('render')) return <SiRender {...iconProps} />;
   if (techLower.includes('d3')) return <Code2 {...iconProps} />;
   if (techLower.includes('openai')) return <Zap {...iconProps} />;
+  if (techLower.includes('whatsapp')) return <SiWhatsapp {...iconProps} className="text-green-500" />;
+  if (techLower.includes('google sheets') || techLower.includes('sheets')) return <SiGooglesheets {...iconProps} className="text-emerald-600" />;
 
   return <Code2 {...iconProps} />;
 };

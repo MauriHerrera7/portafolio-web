@@ -13,6 +13,37 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: 7,
+    title: "CHAT BOT TATL IA",
+    description:
+      "Chatbot inteligente que automatiza la agenda de turnos, responde información de la empresa y gestiona precios, guardando todo en Google Sheets para un control total.",
+    longDescription:
+      "TATL IA es una solución de vanguardia diseñada para automatizar la interacción con clientes y la gestión de citas. Capaz de agendar, cancelar y reprogramar turnos de forma autónoma, el chatbot también maneja consultas sobre precios y detalles de la empresa. Una de sus funcionalidades clave es la integración con Google Sheets, donde se registran automáticamente todos los turnos agendados, permitiendo al dueño del negocio tener una planilla organizada y accesible en tiempo real. Su esencia es ahorrar tiempo y agilizar los procesos operativos, liberando al usuario de la necesidad de estar pendiente del celular permanentemente.",
+    image: "https://res.cloudinary.com/dry6dvzoj/image/upload/v1776592082/tatl_ai_pcobsj.png",
+    technologies: [
+      "Python",
+      "OpenAI API",
+      "WhatsApp API",
+      "Google Sheets API",
+      "Django",
+      "PostgreSQL",
+    ],
+    github: "", // Add GitHub link if available
+    demo: "",   // Add Demo link if available
+    status: "ACTIVE",
+    category: "AI",
+    features: [
+      "Agenda y cancelación de turnos automática",
+      "Sincronización en tiempo real con Google Sheets",
+      "Registro detallado de turnos en planilla Excel",
+      "Respuestas inteligentes sobre la empresa",
+      "Gestión de lista de precios actualizada",
+      "Disponibilidad 24/7 sin intervención humana",
+      "Integración directa con WhatsApp API",
+    ],
+  },
+
 
   {
     id: 4,
