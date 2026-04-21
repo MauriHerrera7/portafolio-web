@@ -29,8 +29,8 @@ export const projects: Project[] = [
       "Django",
       "PostgreSQL",
     ],
-    github: "", // Add GitHub link if available
-    demo: "",   // Add Demo link if available
+    github: "", 
+    demo: "",   
     status: "ACTIVE",
     category: "AI",
     features: [

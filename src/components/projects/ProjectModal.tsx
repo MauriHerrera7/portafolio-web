@@ -104,14 +104,16 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 </div>
 
                 <div className="pt-8 border-t border-white/10 space-y-4">
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    className="w-full flex items-center justify-center gap-3 py-4 bg-white text-black font-bold rounded-2xl hover:bg-cyan-400 transition-colors"
-                  >
-                    <ExternalLink className="w-5 h-5" />
-                    VISITAR SITIO
-                  </a>
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      className="w-full flex items-center justify-center gap-3 py-4 bg-white text-black font-bold rounded-2xl hover:bg-cyan-400 transition-colors"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                      VISITAR SITIO
+                    </a>
+                  )}
                   {project.github && (
                     <a
                       href={project.github}

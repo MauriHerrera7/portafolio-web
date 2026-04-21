@@ -110,16 +110,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) =>
               CODE
             </a>
           )}
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-xs font-bold transition-all"
-          >
-            <ExternalLink className="w-4 h-4" />
-            LIVE
-          </a>
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-xs font-bold transition-all"
+            >
+              <ExternalLink className="w-4 h-4" />
+              LIVE
+            </a>
+          )}
         </div>
       </div>
     </motion.div>
