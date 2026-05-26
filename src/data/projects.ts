@@ -30,7 +30,7 @@ export const projects: Project[] = [
       "PostgreSQL",
     ],
     github: "", 
-    demo: "",   
+    demo: "https://tatl-ai.vercel.app/",   
     status: "ACTIVE",
     category: "AI",
     features: [
