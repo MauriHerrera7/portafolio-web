@@ -26,7 +26,7 @@ export default function Header() {
   const currentTheme = mounted ? (resolvedTheme || theme) : 'dark';
 
   const navLinks = [
-    { name: 'Inicio', href: '/', isScroll: false },
+    { name: 'Inicio', href: '/#hero', isScroll: true },
     { name: 'Sobre mí', href: '/#about', isScroll: true },
     { name: 'Proyectos', href: '/#projects', isScroll: true },
     { name: 'Contacto', href: '/contact', isScroll: false },
@@ -45,7 +45,7 @@ export default function Header() {
             : 'bg-transparent border-transparent'
         }`}>
           {/* Logo */}
-          <Link href="/" className="group flex items-center gap-2">
+          <ScrollLink href="/#hero" className="group flex items-center gap-2 cursor-pointer">
             <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:rotate-12 transition-transform duration-300">
                <span className="text-white font-black text-lg sm:text-xl">M</span>
             </div>
@@ -53,7 +53,7 @@ export default function Header() {
               <span className="text-slate-900 dark:text-white font-bold leading-none tracking-tight text-sm sm:text-base">Mauricio</span>
               <span className="text-cyan-600 dark:text-cyan-400 text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.2em] leading-none mt-1">Fullstack Dev</span>
             </div>
-          </Link>
+          </ScrollLink>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">

@@ -9,7 +9,7 @@ import HeroNeonParticles from "./hero-neon-particles";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[100svh] flex items-center justify-center pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-20 overflow-hidden bg-slate-50 dark:bg-[#030303] text-slate-900 dark:text-white transition-colors duration-300">
+    <section id="hero" className="relative min-h-[100svh] flex items-center justify-center pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-20 overflow-hidden bg-slate-50 dark:bg-[#030303] text-slate-900 dark:text-white transition-colors duration-300">
       <HeroNeonParticles />
       
       {/* Background Glows */}

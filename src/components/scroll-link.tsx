@@ -1,6 +1,6 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 
 interface ScrollLinkProps {
   href: string
@@ -11,21 +11,36 @@ interface ScrollLinkProps {
 
 export default function ScrollLink({ href, children, className, onClick }: ScrollLinkProps) {
   const router = useRouter()
+  const pathname = usePathname()
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault()
     
-    // Call the optional onClick handler first (for closing mobile menu, etc.)
+    // Call the optional onClick handler first (e.g. close mobile menu)
     if (onClick) {
       onClick()
     }
 
-    // Check if it's a hash link (starts with /#)
-    if (href.startsWith('/#')) {
-      const targetId = href.slice(2) // Remove '/#'
+    const isHomePage = pathname === '/'
+
+    // Handle scroll to top (Inicio / Logo)
+    if (href === '/' || href === '/#hero' || href === '/#top' || href === '#hero') {
+      if (isHomePage) {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else {
+        router.push('/')
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        }, 150)
+      }
+      return
+    }
+
+    // Check if it's a hash link (starts with /# or #)
+    if (href.startsWith('/#') || href.startsWith('#')) {
+      const targetId = href.replace(/^\/?#/, '')
       
-      // If we're already on the home page, just scroll
-      if (window.location.pathname === '/') {
+      if (isHomePage) {
         const element = document.getElementById(targetId)
         if (element) {
           element.scrollIntoView({ 
@@ -34,10 +49,7 @@ export default function ScrollLink({ href, children, className, onClick }: Scrol
           })
         }
       } else {
-        // Navigate to home page first, then scroll
         router.push('/')
-        
-        // Wait for navigation to complete, then scroll
         setTimeout(() => {
           const element = document.getElementById(targetId)
           if (element) {
@@ -46,10 +58,9 @@ export default function ScrollLink({ href, children, className, onClick }: Scrol
               block: 'start'
             })
           }
-        }, 100)
+        }, 150)
       }
     } else {
-      // Regular navigation
       router.push(href)
     }
   }
