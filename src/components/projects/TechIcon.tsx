@@ -4,9 +4,11 @@ import {
   SiReact, SiJavascript, SiHtml5, SiCss3, SiBootstrap, SiExpress, SiMongodb, SiNodedotjs, 
   SiPostgresql, SiNextdotjs, SiTypescript, SiTailwindcss, SiStripe, SiPython, SiThreedotjs, 
   SiSocketdotio, SiTensorflow, SiPrisma, SiWebgl, SiNestjs, SiDocker, SiSwagger, SiCloudinary, 
-  SiJsonwebtokens, SiAuth0, SiRender, SiWhatsapp, SiGooglesheets 
+  SiJsonwebtokens, SiAuth0, SiRender, SiWhatsapp, SiGooglesheets, SiDjango, SiGithub,
+  SiMui 
 } from 'react-icons/si';
-import { Code2, Zap } from 'lucide-react';
+import { FaAws } from 'react-icons/fa';
+import { Code2, Zap, Sparkles, Bot, FileText, QrCode } from 'lucide-react';
 
 interface TechIconProps {
   tech: string;
@@ -47,7 +49,16 @@ export const TechIcon: React.FC<TechIconProps> = ({ tech, size = 20, className =
   if (techLower.includes('oauth2') || techLower.includes('oauth')) return <SiAuth0 {...iconProps} />;
   if (techLower.includes('render')) return <SiRender {...iconProps} />;
   if (techLower.includes('d3')) return <Code2 {...iconProps} />;
-  if (techLower.includes('openai')) return <Zap {...iconProps} />;
+  if (techLower.includes('langgraph') || techLower.includes('langchain')) return <Bot {...iconProps} className="text-violet-500 dark:text-violet-400" />;
+  if (techLower.includes('drf') || techLower.includes('rest framework')) return <SiDjango {...iconProps} className="text-emerald-500 dark:text-emerald-400" />;
+  if (techLower.includes('aws') || techLower.includes('s3')) return <FaAws {...iconProps} className="text-amber-500" />;
+  if (techLower.includes('material') || techLower.includes('mui')) return <SiMui {...iconProps} className="text-blue-500" />;
+  if (techLower.includes('pdf')) return <FileText {...iconProps} className="text-red-500" />;
+  if (techLower.includes('qr')) return <QrCode {...iconProps} className="text-cyan-500" />;
+  if (techLower.includes('django')) return <SiDjango {...iconProps} className="text-emerald-500 dark:text-emerald-400" />;
+  if (techLower.includes('github')) return <SiGithub {...iconProps} />;
+  if (techLower === 'ia' || techLower === 'ai' || techLower.includes('inteligencia artificial')) return <Sparkles {...iconProps} className="text-amber-500 dark:text-amber-400" />;
+  if (techLower.includes('openai')) return <Zap {...iconProps} className="text-green-500" />;
   if (techLower.includes('whatsapp')) return <SiWhatsapp {...iconProps} className="text-green-500" />;
   if (techLower.includes('google sheets') || techLower.includes('sheets')) return <SiGooglesheets {...iconProps} className="text-emerald-600" />;
 
