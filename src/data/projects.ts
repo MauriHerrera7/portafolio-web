@@ -14,6 +14,43 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 11,
+    title: "ECOMMERCE API",
+    description:
+      "API REST lista para producción que cubre el ciclo completo de una tienda: autenticación JWT, catálogo con paginación, checkout transaccional con bloqueo pesimista, idempotencia, subida de imágenes y pipeline CI/CD.",
+    longDescription:
+      "Una API REST lista para producción que cubre el ciclo completo de una tienda:\n\n• Usuarios y autenticación — registro, login con JWT, roles de cliente y administrador\n\n• Catálogo — productos y categorías con paginación\n\n• Checkout transaccional — las órdenes se crean dentro de una transacción PostgreSQL con bloqueo pesimista de filas, garantizando que el stock nunca queda negativo aunque lleguen dos requests al mismo tiempo\n\n• Idempotencia — si el cliente reintenta una compra (por ejemplo por timeout de red), el sistema detecta que ya la procesó y devuelve la misma orden sin cobrar dos veces ni descontar stock de nuevo\n\n• Imágenes — subida de fotos de producto a Cloudinary\n\n• Observabilidad — health checks, logs estructurados en JSON, rate limiting\n\n• DevOps — Docker multi-stage, pipeline CI/CD en GitHub Actions, despliegue automatizado en Render con migraciones incluidas",
+    image:
+      "https://res.cloudinary.com/dry6dvzoj/image/upload/v1789866506/NestJS_x7ewpx.jpg",
+    technologies: [
+      "NestJS",
+      "TypeScript",
+      "PostgreSQL",
+      "JWT",
+      "Docker",
+      "Cloudinary",
+      "GitHub Actions",
+      "Swagger",
+      "Render",
+    ],
+    github: "https://github.com/MauriHerrera7/E-commerce-api",
+    demo: "https://e-commerce-api-sm5d.onrender.com/api#/",
+    status: "DEPLOYED",
+    category: "BACKEND API",
+    features: [
+      "Autenticación JWT con roles de cliente y administrador",
+      "Catálogo de productos y categorías con paginación",
+      "Checkout transaccional con bloqueo pesimista de filas (stock seguro)",
+      "Idempotencia: reintentos de compra sin doble cobro ni doble descuento",
+      "Subida de imágenes de producto a Cloudinary",
+      "Health checks, logs estructurados en JSON y rate limiting",
+      "Docker multi-stage para build optimizado",
+      "Pipeline CI/CD en GitHub Actions",
+      "Despliegue automatizado en Render con migraciones incluidas",
+      "Documentación con Swagger",
+    ],
+  },
+  {
     id: 10,
     title: "ADBIZE",
     description:
