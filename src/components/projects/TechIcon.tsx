@@ -5,7 +5,7 @@ import {
   SiPostgresql, SiNextdotjs, SiTypescript, SiTailwindcss, SiStripe, SiPython, SiThreedotjs, 
   SiSocketdotio, SiTensorflow, SiPrisma, SiWebgl, SiNestjs, SiDocker, SiSwagger, SiCloudinary, 
   SiJsonwebtokens, SiAuth0, SiRender, SiWhatsapp, SiGooglesheets, SiDjango, SiGithub,
-  SiMui 
+  SiMui, SiRedis, SiVitest, SiTypeorm
 } from 'react-icons/si';
 import { FaAws } from 'react-icons/fa';
 import { Code2, Zap, Sparkles, Bot, FileText, QrCode } from 'lucide-react';
@@ -29,6 +29,10 @@ export const TechIcon: React.FC<TechIconProps> = ({ tech, size = 20, className =
   if (techLower.includes('mongodb')) return <SiMongodb {...iconProps} />;
   if (techLower.includes('node')) return <SiNodedotjs {...iconProps} />;
   if (techLower.includes('postgresql')) return <SiPostgresql {...iconProps} />;
+  if (techLower.includes('redis')) return <SiRedis {...iconProps} />;
+  if (techLower.includes('vitest')) return <SiVitest {...iconProps} />;
+  if (techLower.includes('typeorm')) return <SiTypeorm {...iconProps} />;
+  if (techLower.includes('bullmq') || techLower.includes('bull')) return <SiRedis {...iconProps} className="text-red-500 dark:text-red-400" />;
   if (techLower.includes('next')) return <SiNextdotjs {...iconProps} />;
   if (techLower.includes('typescript')) return <SiTypescript {...iconProps} />;
   if (techLower.includes('tailwind')) return <SiTailwindcss {...iconProps} />;

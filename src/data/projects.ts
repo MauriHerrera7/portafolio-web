@@ -14,6 +14,41 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 12,
+    title: "FLUXERA",
+    description:
+      "Motor de procesamiento asíncrono de eventos: sistema backend resiliente, idempotente y escalable con NestJS, PostgreSQL, Redis y BullMQ.",
+    longDescription:
+      "Fluxera es un sistema backend robusto diseñado para gestionar flujos de eventos de forma asíncrona, tolerante a fallos y altamente escalable. Construido sobre una arquitectura modular limpia, el sistema garantiza la consistencia de los datos mediante un control estricto de idempotencia, asegurando que ninguna transacción se procese por duplicado.\n\n• Procesamiento Asíncrono Resiliente: Integración con Redis y BullMQ para la gestión de colas de trabajo, desacoplando la recepción del evento de su ejecución.\n\n• Control de Idempotencia: Uso de PostgreSQL como única fuente de la verdad para interceptar y neutralizar solicitudes duplicadas en milisegundos.\n\n• Manejo de Ciclo de Vida y Reintentos: Máquina de estados automatizada (PENDING -> PROCESSING -> PROCESSED / FAILED) con políticas de reintento inteligente basadas en backoff exponencial.\n\n• Calidad y Fiabilidad: Cobertura de pruebas unitarias y End-to-End (E2E) con Vitest, además de despliegue contenerizado vía Docker.",
+    image:
+      "https://res.cloudinary.com/dry6dvzoj/image/upload/v1789866506/NestJS_x7ewpx.jpg",
+    technologies: [
+      "TypeScript",
+      "NestJS",
+      "PostgreSQL",
+      "TypeORM",
+      "Redis",
+      "BullMQ",
+      "Docker",
+      "Vitest",
+    ],
+    github: "https://github.com/MauriHerrera7/Fluxera",
+    demo: "https://github.com/MauriHerrera7/Fluxera",
+    status: "COMPLETED",
+    category: "BACKEND API",
+    features: [
+      "Procesamiento asíncrono resiliente con Redis y BullMQ",
+      "Desacople entre recepción del evento y su ejecución",
+      "Idempotencia con PostgreSQL como fuente de la verdad",
+      "Neutralización de solicitudes duplicadas en milisegundos",
+      "Máquina de estados: PENDING → PROCESSING → PROCESSED / FAILED",
+      "Reintentos inteligentes con backoff exponencial",
+      "Arquitectura modular limpia y escalable",
+      "Pruebas unitarias y E2E con Vitest",
+      "Despliegue contenerizado con Docker",
+    ],
+  },
+  {
     id: 11,
     title: "ECOMMERCE API",
     description:
