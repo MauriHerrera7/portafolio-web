@@ -5,7 +5,7 @@ import {
   SiPostgresql, SiNextdotjs, SiTypescript, SiTailwindcss, SiStripe, SiPython, SiThreedotjs, 
   SiSocketdotio, SiTensorflow, SiPrisma, SiWebgl, SiNestjs, SiDocker, SiSwagger, SiCloudinary, 
   SiJsonwebtokens, SiAuth0, SiRender, SiWhatsapp, SiGooglesheets, SiDjango, SiGithub,
-  SiMui, SiRedis, SiVitest, SiTypeorm
+  SiMui, SiRedis, SiVitest, SiTypeorm, SiVite, SiVercel
 } from 'react-icons/si';
 import { FaAws } from 'react-icons/fa';
 import { Code2, Zap, Sparkles, Bot, FileText, QrCode } from 'lucide-react';
@@ -39,6 +39,9 @@ export const TechIcon: React.FC<TechIconProps> = ({ tech, size = 20, className =
   if (techLower.includes('stripe')) return <SiStripe {...iconProps} />;
   if (techLower.includes('python')) return <SiPython {...iconProps} />;
   if (techLower.includes('three')) return <SiThreedotjs {...iconProps} />;
+  if (techLower.includes('vite')) return <SiVite {...iconProps} className="text-violet-500 dark:text-violet-400" />;
+  if (techLower.includes('vercel')) return <SiVercel {...iconProps} />;
+  if (techLower.includes('spline')) return <SiWebgl {...iconProps} className="text-pink-500 dark:text-pink-400" />;
   if (techLower.includes('socket')) return <SiSocketdotio {...iconProps} />;
   if (techLower.includes('tensorflow')) return <SiTensorflow {...iconProps} />;
   if (techLower.includes('prisma')) return <SiPrisma {...iconProps} />;
