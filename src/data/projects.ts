@@ -33,7 +33,7 @@ export const projects: Project[] = [
       "Vitest",
     ],
     github: "https://github.com/MauriHerrera7/Fluxera",
-    demo: "https://github.com/MauriHerrera7/Fluxera",
+    demo: "https://fluxera.onrender.com/api/docs",
     status: "COMPLETED",
     category: "BACKEND API",
     features: [
