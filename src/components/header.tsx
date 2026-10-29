@@ -165,7 +165,7 @@ export default function Header() {
                       <Github className="w-5 h-5"/>
                     </a>
                     <a 
-                      href="https://www.linkedin.com/in/mauricio-herrera-7b744b274" 
+                      href="https://www.linkedin.com/in/herreramauricio/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="p-2.5 bg-gray-100 dark:bg-white/5 rounded-full text-slate-700 dark:text-gray-400 hover:text-cyan-500 transition-colors"

@@ -30,7 +30,7 @@ const contactDetails = [
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/MauriHerrera7', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://www.linkedin.com/in/mauricio-herrera-7b744b274', label: 'LinkedIn' }
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/herreramauricio/', label: 'LinkedIn' }
 ];
 
 export const ContactInfo = () => {

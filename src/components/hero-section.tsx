@@ -81,7 +81,7 @@ export default function HeroSection() {
                  <Github className="w-5 h-5 sm:w-6 sm:h-6" />
                </a>
                <a 
-                href="https://www.linkedin.com/in/mauricio-herrera-7b744b274" 
+                href="https://www.linkedin.com/in/herreramauricio/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-slate-500 hover:text-slate-900 dark:text-gray-500 dark:hover:text-white transition-colors p-1"

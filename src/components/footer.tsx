@@ -27,7 +27,7 @@ export default function Footer() {
               <Github className="h-4 w-4 sm:h-5 sm:w-5" />
             </a>
             <a
-              href="https://www.linkedin.com/in/mauricio-herrera-7b744b274"
+              href="https://www.linkedin.com/in/herreramauricio/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-cyan-500/10 border border-slate-200 dark:border-white/10 hover:border-cyan-500 text-slate-700 dark:text-gray-400 hover:text-cyan-600 dark:hover:text-cyan-400 rounded-2xl transition-all shadow-xs"
